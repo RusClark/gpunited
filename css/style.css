@@ -4,12 +4,12 @@
 	/* primary color block */
 	/* Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.Saturation is a percentage value. 0% means a shade of gray, and 100% is the full color.Lightness is also a percentage. 0% is black, 50% is neither light or dark, 100% is white */
 
-	--primary-color-light: hsl(118, 100%, 80%);
-	--primary-color-glare: hsl(61, 100%, 60%);
-	--primary-color-dark: hsl(60, 31%, 21%);
+	--primary-color-light: hsl(185, 51%, 83%);
+	--primary-color-glare: hsl(185, 100%, 60%);
+	--primary-color-dark: hsl(185, 31%, 21%);
 
 	/* secondary color block */
-	--secondary-color-light: hsl(241, 100%, 80%);
+	--secondary-color-light: hsl(348, 100%, 80%);
 	--secondary-color-glare: hsl(241, 100%, 60%);
 	--secondary-color-dark: hsl(241, 100%, 40%);
 
