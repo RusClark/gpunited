@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Grid play</title>
+		<title>GP United</title>
 
 		<link rel="stylesheet" href="/css/ab-reset.css" />
 		<link rel="stylesheet" href="/css/style.css" />
@@ -36,68 +36,95 @@
 			<h2>working for every General Practice in BNSSG</h2>
 
 			<div class="cover box invert">
-				<div class="center">
-					<div class="frame"><img src="/images/gpu-5.png" alt="" /></div>
+				<div class="flow center">
+					<div class="frame"><img src="/images/sfd-11.jpg" alt="" /></div>
 					<p>
-						Your question will be read and answered by the LMC, One Care and the
-						GPCB
+						Put your question to the LMC, One Care and the
+						GPCB here ...
 					</p>
 				</div>
 				<form data-netlify="true" name="question" method="POST">
-					<label for="name">Name:</label>
-					<input type="text" id="name" name="name" required /><br /><br />
-					<label for="email">Email:</label>
-					<input type="email" id="email" name="email" required /><br /><br />
-					<label for="mobile">Mobile Number:</label>
-					<input type="tel" id="mobile" name="mobile" required /><br /><br />
-					<label for="pcn">PCN:</label>
-					<select id="pcn" name="pcn">
-						<option value="pcn1">PCN 1</option>
-						<!-- Add more options up to PCN 20 -->
-						<option value="pcn20">PCN 20</option></select
-					><br /><br />
-					<label for="practice">Practice Name:</label>
-					<select id="practice" name="practice">
-						<option value="practice1">Practice 1</option>
-						<option value="practice2">Practice 2</option>
-						<option value="practice3">Practice 3</option></select
-					><br /><br />
-					<label for="question">Your Question:</label><br />
-					<textarea
-						id="question"
-						name="question"
-						rows="4"
-						cols="50"
-						required
-					></textarea
-					><br /><br />
-					<input
-						type="radio"
-						id="personalResponse"
-						name="responseType"
-						value="personalResponse"
-					/>
-					<label for="personalResponse">I would like a personal response</label
-					><br />
-					<input
-						type="radio"
-						id="tableMeeting"
-						name="responseType"
-						value="tableMeeting"
-					/>
-					<label for="tableMeeting">I wish to table this at a meeting</label
-					><br /><br />
-					<input
-						type="checkbox"
-						id="noClinicalInfo"
-						name="noClinicalInfo"
-						required
-					/>
-					<label for="noClinicalInfo"
-						>I confirm that no clinical information is entered</label
-					><br /><br />
-					<input type="submit" class="button" value="Send Us Your Question" />
-				</form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required /><br /><br />
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required /><br /><br />
+    <label for="mobile">Mobile Number:</label>
+    <input type="tel" id="mobile" name="mobile" required /><br /><br />
+
+    <!-- Locality Select Field -->
+    <label for="locality">Locality:</label>
+    <select id="locality" name="locality">
+        <!-- Assuming 20 localities as per your initial data -->
+        <option value="1">Locality 1</option>
+        <option value="2">Locality 2</option>
+        <!-- Continue adding options up to 20 -->
+        <option value="20">Locality 20</option>
+    </select><br /><br />
+
+    <!-- PCN Select Field -->
+    <label for="pcn">PCN:</label>
+    <select id="pcn" name="pcn">
+        <!-- Assuming 20 PCNs as per your initial data -->
+        <option value="1">PCN 1</option>
+        <option value="2">PCN 2</option>
+        <!-- Continue adding options up to 20 -->
+        <option value="20">PCN 20</option>
+    </select><br /><br />
+
+    <!-- Practices Select Field -->
+    <label for="practice">Practice Name:</label>
+    <select id="practice" name="practice">
+        <!-- Assuming 3 practices for example -->
+        <option value="1">Practice 1</option>
+        <option value="2">Practice 2</option>
+        <option value="3">Practice 3</option>
+    </select><br /><br />
+
+    <!-- Organisation Response Section -->
+    <fieldset>
+        <legend>Which organisation would you like your response from?</legend>
+        <input type="radio" id="lmc" name="organisationResponse" value="LMC">
+        <label for="lmc">LMC</label><br />
+        <input type="radio" id="oneCare" name="organisationResponse" value="One Care">
+        <label for="oneCare">One Care</label><br />
+        <input type="radio" id="gpcb" name="organisationResponse" value="GPCB">
+        <label for="gpcb">GPCB</label><br />
+        <input type="radio" id="allOrganisations" name="organisationResponse" value="All">
+        <label for="allOrganisations">All</label>
+    </fieldset><br />
+
+    <!-- Question Text Area -->
+    <label for="question">Your Question:</label><br />
+    <textarea id="question" name="question" rows="4" cols="50" required></textarea><br /><br />
+
+    <!-- Response Type Radio Buttons -->
+    <input type="radio" id="personalResponse" name="responseType" value="personalResponse" />
+    <label for="personalResponse">I would like a personal response</label><br />
+    <input type="radio" id="tableMeeting" name="responseType" value="tableMeeting" />
+    <label for="tableMeeting">I wish to table this at a meeting</label><br /><br />
+
+    <!-- Clinical Information Checkbox -->
+    <input type="checkbox" id="noClinicalInfo" name="noClinicalInfo" required />
+    <label for="noClinicalInfo">I confirm that no clinical information is entered</label><br /><br />
+
+	<!-- Urgency Section -->
+<fieldset>
+    <legend>Urgency of Request:</legend>
+    <input type="radio" id="sameDay" name="urgency" value="sameDay" />
+    <label for="sameDay">Same day</label><br />
+    <input type="radio" id="fiveBusinessDays" name="urgency" value="fiveBusinessDays" />
+    <label for="fiveBusinessDays">5 business days</label><br />
+    <input type="radio" id="tenBusinessDays" name="urgency" value="tenBusinessDays" />
+    <label for="tenBusinessDays">10 business days</label><br />
+    <input type="radio" id="whenKnown" name="urgency" value="whenKnown" />
+    <label for="whenKnown">When known</label>
+</fieldset><br />
+
+
+    <!-- Submit Button -->
+    <input type="submit" class="button" value="Send Us Your Question" />
+</form>
+
 				<div><!-- footer --></div>
 			</div>
 

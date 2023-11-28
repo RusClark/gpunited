@@ -1,17 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Arvo:wght@400;700&family=Dancing+Script&family=Dosis:wght@200;300;400;500;700&family=Exo:wght@100;200;300;400;500;700;900&family=Lato:wght@100;300;400;900&family=Libre+Baskerville:wght@400;700&family=Merriweather:wght@300;400;700;900&family=Mina:wght@400;700&family=Playfair+Display:wght@400;500;700;900&family=Poppins:wght@100;200;300;400;700&family=Quicksand:wght@300;400;500;700&family=Roboto:wght@100;300;400;500;700;900display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Gelasio:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
 	/* primary color block */
 	/* Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.Saturation is a percentage value. 0% means a shade of gray, and 100% is the full color.Lightness is also a percentage. 0% is black, 50% is neither light or dark, 100% is white */
 
-	--primary-color-light: hsl(61,100%, 80%);
+	--primary-color-light: hsl(118, 100%, 80%);
 	--primary-color-glare: hsl(61, 100%, 60%);
-	--primary-color-dark: hsl(61, 100%, 40%);
+	--primary-color-dark: hsl(60, 31%, 21%);
 
 	/* secondary color block */
 	--secondary-color-light: hsl(241, 100%, 80%);
@@ -289,6 +284,7 @@ h2 {
 
 /* Exceptions */
 
+
 [role='content-info'] {
 	margin-block-start: var(--space-s-2xl);
 	font-size: var(--step--1);
@@ -299,9 +295,11 @@ h2 {
 }
 
 textarea,
-input {
+input ,select{
 	max-width: 90%;
 	margin-inline: auto;
+	background-color: black;
+	
 }
 
 img {
