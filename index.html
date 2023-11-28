@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Grid play</title>
+
+		<link rel="stylesheet" href="/css/ab-reset.css" />
+		<link rel="stylesheet" href="/css/style.css" />
+
+		<!-- <link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+			integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+			crossorigin="anonymous"
+		/> -->
+	</head>
+	<body>
+		<nav class="box">
+			<ul role="list" class="cluster">
+				<li class="nav-item">
+					<a class="" href="#">Avon LMC</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="#">One Care</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="#">The GPCB</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="wrapper flow">
+			<h1>GP United</h1>
+			<h2>working for every General Practice in BNSSG</h2>
+
+			<div class="cover box invert">
+				<div class="center">
+					<div class="frame"><img src="/images/gpu-5.png" alt="" /></div>
+					<p>
+						Your question will be read and answered by the LMC, One Care and the
+						GPCB
+					</p>
+				</div>
+				<form netlify="true" action="" method="POST">
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="name" required /><br /><br />
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required /><br /><br />
+					<label for="mobile">Mobile Number:</label>
+					<input type="tel" id="mobile" name="mobile" required /><br /><br />
+					<label for="pcn">PCN:</label>
+					<select id="pcn" name="pcn">
+						<option value="pcn1">PCN 1</option>
+						<!-- Add more options up to PCN 20 -->
+						<option value="pcn20">PCN 20</option></select
+					><br /><br />
+					<label for="practice">Practice Name:</label>
+					<select id="practice" name="practice">
+						<option value="practice1">Practice 1</option>
+						<option value="practice2">Practice 2</option>
+						<option value="practice3">Practice 3</option></select
+					><br /><br />
+					<label for="question">Your Question:</label><br />
+					<textarea
+						id="question"
+						name="question"
+						rows="4"
+						cols="50"
+						required
+					></textarea
+					><br /><br />
+					<input
+						type="radio"
+						id="personalResponse"
+						name="responseType"
+						value="personalResponse"
+					/>
+					<label for="personalResponse">I would like a personal response</label
+					><br />
+					<input
+						type="radio"
+						id="tableMeeting"
+						name="responseType"
+						value="tableMeeting"
+					/>
+					<label for="tableMeeting">I wish to table this at a meeting</label
+					><br /><br />
+					<input
+						type="checkbox"
+						id="noClinicalInfo"
+						name="noClinicalInfo"
+						required
+					/>
+					<label for="noClinicalInfo"
+						>I confirm that no clinical information is entered</label
+					><br /><br />
+					<input type="submit" class="button" value="Send Us Your Question" />
+				</form>
+				<div><!-- footer --></div>
+			</div>
+
+			<div class="grid">
+				<div class="cards grid">
+					<div class="invert box">
+						<div class="card-header cluster">
+							<h3 class="card-titl">Ask us</h3>
+							<div class="card-img">
+								<div class="frame"><img src="/images/oc-5.png" alt="" /></div>
+							</div>
+						</div>
+						<div class="card-text">
+							<p>
+								Together the LMC, One Care and the GPCB represent the voice of
+								General Practice and provide practical support to individual
+								practices and individuals.
+							</p>
+						</div>
+					</div>
+					<div class="invert box">
+						<div class="card-header cluster">
+							<h3 class="card-title">LMC</h3>
+							<div class="card-img">
+								<img src="/images/lmc-logo.png" alt="" />
+							</div>
+						</div>
+						<div class="card-text">
+							<p>
+								Championing the voices of local GPs, focusing on grassroots
+								medical advocacy and support.
+							</p>
+						</div>
+					</div>
+					<div class="invert box flow">
+						<div class="card-heade flow">
+							<h3 class="card-titl">One Care</h3>
+							<div class="card-img frame">
+								<img src="images/oc-9.png" alt="" />
+							</div>
+						</div>
+						<div class="card-text">
+							<p>
+								Empowering GP practices through collaborative innovation,
+								enhancing healthcare delivery across communities.
+							</p>
+						</div>
+					</div>
+					<div class=" invert flow box">
+					
+				
+					<div class="card-heade flow">
+						<h3 class="card-titl flow">GPCB</h3>
+						<div class="card-img frame">
+							<img src="images/gpu-1.jpg" alt="" />
+						</div>
+					</div>
+					<div class="card-text">
+						<p>
+							Driving excellence in primary care governance, ensuring quality
+							and efficiency in healthcare services.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="grid">
+			<div id="centralized-information" class="invert box flow">
+				<h3>Centralized Information</h3>
+				<div class="frame">
+					<img src="images/sfd-11.jpg" alt="Centralized Information" />
+				</div>
+				<p>
+					Navigate the complexities of healthcare with ease through our
+					Centralized Information hub. Here, Avon LMC and One Care unite to
+					bring you the latest healthcare policies, insightful guidelines, and
+					industry news. Our joint commitment ensures you receive consistent,
+					timely updates that empower your practice.
+				</p>
+				<div class="button">Find out more...</div>
+			</div>
+
+			<!-- Repeat the structure below for each of the remaining nine areas -->
+			<div class="box invert flow">
+				<h3>Membership Services</h3>
+				<img src="/images/oc-5.png" alt="Membership Services" />
+				<p>
+					Our Membership Services are streamlined for simplicity and efficiency.
+					Avon LMC and One Care members can manage their memberships with ease,
+					benefiting from the potential for reduced fees through combined
+					resources. Embrace the convenience of a single registration and
+					renewal process, and invest more time in what truly matters—your
+					patients.
+				</p>
+				<div class="button">Find out more...</div>
+			</div>
+		</div>
+
+		<footer role="content-info">@moc2023</footer>
+
+		<script src="/script.js"></script>
+	</body>
+</html>
+
