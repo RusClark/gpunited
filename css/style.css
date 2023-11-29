@@ -327,6 +327,11 @@ img {
 	padding: var(--space-3xs-2xs);
 }
 
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+
 .hero {
 	--flow-space: var(--space-xs);
 	/* width: 100vw; */
