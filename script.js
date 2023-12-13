@@ -162,39 +162,39 @@ function updatePCNDropdown(locality) {
 	}
 }
 
-async function fetchNHSVideos() {
-	const apiKey = 'c189e6929e9d47059711875820ff254b' // Replace with your API key
-	const url = 'https://api.nhs.uk/video?api-version=1.0'
+// async function fetchNHSVideos() {
+// 	const apiKey = 'c189e6929e9d47059711875820ff254b' // Replace with your API key
+// 	const url = 'https://api.nhs.uk/video?api-version=1.0'
 
-	axios
-		.get(url, { headers: { 'subscription-key': apiKey } })
-		.then((response) => {
-			const videos = response.data.video // Access the video array
-			const videosList = document.getElementById('nhs-videos-list')
-			videosList.innerHTML = '' // Clear existing content
+// 	axios
+// 		.get(url, { headers: { 'subscription-key': apiKey } })
+// 		.then((response) => {
+// 			const videos = response.data.video // Access the video array
+// 			const videosList = document.getElementById('nhs-videos-list')
+// 			videosList.innerHTML = '' // Clear existing content
 
-			videos.forEach((video) => {
-				// Create HTML for each video
-				const videoElement = document.createElement('div')
-				videoElement.innerHTML = `
-                    <div class="box stack flow"><h4>${video.name}</h4>
-                    <p>${video.description}</p>
-                    <a href="${video.embedUrl}" target="_blank">Watch Video</a>
-                    <img src="${video.thumbnailUrl}" alt="${video.name}" /></div>
-                `
-				videosList.appendChild(videoElement)
-			})
-		})
-		.catch((error) => {
-			console.error('Error fetching NHS videos:', error)
-			document.getElementById('nhs-videos-list').innerHTML =
-				'<p>Error loading videos.</p>'
-		})
-}
+// 			videos.forEach((video) => {
+// 				// Create HTML for each video
+// 				const videoElement = document.createElement('div')
+// 				videoElement.innerHTML = `
+//                     <div class="box stack flow"><h4>${video.name}</h4>
+//                     <p>${video.description}</p>
+//                     <a href="${video.embedUrl}" target="_blank">Watch Video</a>
+//                     <img src="${video.thumbnailUrl}" alt="${video.name}" /></div>
+//                 `
+// 				videosList.appendChild(videoElement)
+// 			})
+// 		})
+// 		.catch((error) => {
+// 			console.error('Error fetching NHS videos:', error)
+// 			document.getElementById('nhs-videos-list').innerHTML =
+// 				'<p>Error loading videos.</p>'
+// 		})
+// }
 
-fetchNHSVideos()
+// fetchNHSVideos()
 
-document.addEventListener('DOMContentLoaded', (event) => {
-	fetchNHSVideos()
-})
+// document.addEventListener('DOMContentLoaded', (event) => {
+// 	fetchNHSVideos()
+// })
 
