@@ -33,15 +33,15 @@
 		</nav>
 
 		<div class="wrapper flow">
-			<h1>GP United</h1>
-			<h2>Working for every General Practice in BNSSG</h2>
+			<h1>One Avon</h1>
+			<h2>GP United - Working for every General Practice in BNSSG</h2>
 
 			<div class="stack flow">
 				<div class="box grid">
 					<div class="box invert">
 						<div class="flow">
 							<h3 class="card-title">We are 3</h3>
-							<div class="frame"><img src="/images/sfd-11.jpg" alt="" /></div>
+							<div class="frame"><img src="/images/weare3.jpg" alt="" /></div>
 							<p>Visit each organisation's website here</p>
 							<div class="box cluster">
 								<div class="button">
@@ -64,7 +64,7 @@
 					<div class="invert flow box">
 						<h3 class="card-title">We are 1</h3>
 						<div class="card-img">
-							<div class="frame"><img src="/images/oc-5.png" alt="" /></div>
+							<div class="frame"><img src="/images/oneavon.webp" alt="" /></div>
 						</div>
 
 						<div class="card-text">
@@ -80,7 +80,9 @@
 
 				<div class="box flow invert">
 					<h2>Ask your question here</h2>
+					<h5>required fields are marked with a *</h5>
 					<form
+						class="stack"
 						data-netlify="true"
 						name="question"
 						method="POST"
@@ -91,234 +93,106 @@
 								Dont fill this out if youre human: <input name="bot-field" />
 							</label>
 						</p>
-						<label for="name">Name:</label><br />
-						<input type="text" id="name" name="name" required /><br /><br />
-						<label for="email">Email:</label><br />
-						<input type="email" id="email" name="email" required /><br /><br />
-						<label for="mobile">Mobile Number:</label><br />
-						<input type="tel" id="mobile" name="mobile" /><br /><br />
+						<!-- Question Text Area -->
+						<label for="question"
+							>*Your Question or Request to General Practice here:</label
+						><br /><br />
+						<textarea
+							class="center"
+							id="question"
+							name="question"
+							rows="6"
+							cols="70"
+							required
+						></textarea
+						><br /><br />
+						<fieldset>
+							<legend>We will need this information to contact you</legend>
+							<label for="name">*Who are you?:</label><br />
+							<input type="text" id="name" name="name" required /><br /><br />
+							<label for="name">What do you do?:</label><br />
+							<input type="text" id="name" name="name" required />
+						</fieldset>
+						<br /><br />
+						<!-- Submit Button -->
+
+						<fieldset>
+							<legend>How would you like to receive our feedback?</legend>
+							<label for="email">*Email:</label><br />
+							<input
+								type="email"
+								id="email"
+								name="email"
+								required
+							/><br /><br />
+							<label for="mobile">Mobile Number:</label>
+
+							<br />
+							<input type="tel" id="mobile" name="mobile" /><br /><br />
+
+							<a href="#noClinicalInfo" class="button center"
+								>Click to Send Now - OR let us know a little more about you
+								first.</a
+							>
+						</fieldset>
+
+						<br /><br />
+
 						<!-- Organization Type Select Field -->
-						<label for="organizationType">Organization Type:</label><br />
-						<select id="organizationType" name="organizationType">
-							<option value="GpPractice">GP Practice</option>
-							<option value="Trust">Trust</option>
-							<option value="ICS">ICS</option>
-							<option value="Sirona">Sirona</option>
-							<option value="LocalAuthority">Local Authority</option>
-							<option value="VoluntarySector">Voluntary Sector</option>
-							<option value="Other">Other</option></select
-						><br /><br />
-						<!-- Locality Select Field -->
-						<label for="locality">Locality:</label><br />
-						<select id="locality" name="locality">
-							<option value=""></option>
-							<option value="Woodspring">Woodspring</option>
-							<option value="NorthWestBristol">North & West Bristol</option>
-							<option value="InnerCityEastBristol">
-								Inner City & East Bristol
-							</option>
-							<option value="SouthGloucestershire">
-								South Gloucestershire
-							</option>
-							<option value="SouthBristol">South Bristol</option>
-							<option value="WestonWorleVillages">
-								Weston, Worle and Villages
-							</option></select
-						><br /><br />
-						<!-- PCN Select Field -->
-						<label for="pcn">PCN:</label><br />
-						<select id="pcn" name="pcn">
-							<option value=""></option>
-							<option value="Tyntesfield">Tyntesfield</option>
-							<option value="GordanoValley">Gordano Valley</option>
-							<option value="MendipVale">Mendip Vale</option>
-							<option value="Healthwest">Healthwest</option>
-							<option value="Affinity">Affinity</option>
-							<option value="NorthernArc">Northern Arc</option>
-							<option value="Phoenix">Phoenix</option>
-							<option value="BristolInnerCity">Bristol Inner City (BIC)</option>
-							<option value="FABB">FABB</option>
-							<option value="Foss">Foss</option>
-							<option value="4PCN">4PCN</option>
-							<option value="Severnvale">Severnvale</option>
-							<option value="Network4">Network 4</option>
-							<option value="YateFrampton">Yate & Frampton</option>
-							<option value="TheStokes">The Stokes</option>
-							<option value="BridgeViewMedical">Bridge View Medical</option>
-							<option value="Swift">Swift</option>
-							<option value="Connexus">Connexus</option>
-							<option value="PierHealth">Pier Health</option></select
-						><br /><br />
-						<!-- Practices Select Field -->
-						<label for="practice">Practice Name:</label><br />
-						<select id="practice" name="practice">
-							<option value=""></option>
-							<option value="TyntsfieldMedicalGroup">
-								Tyntsfield Medical Group
-							</option>
-							<option value="ClevedonMedicalCentre">
-								Clevedon Medical Centre
-							</option>
-							<option value="HarboursideFamilyPractice">
-								Harbourside Family Practice
-							</option>
-							<option value="HeywoodFamilyPractice">
-								Heywood Family Practice
-							</option>
-							<option value="PortisheadMedicalGroup">
-								Portishead Medical Group
-							</option>
-							<option value="MendipValeMedicalPractice">
-								Mendip Vale Medical Practice
-							</option>
-							<option value="PembrokeRoadSurgery">Pembroke Road Surgery</option>
-							<option value="StudentHealthService">
-								Student Health Service
-							</option>
-							<option value="TheFamilyPractice">The Family Practice</option>
-							<option value="WhiteladiesMedicalGroup">
-								Whiteladies Medical Group
-							</option>
-							<option value="FallodonWayMedicalCentre">
-								Fallodon Way Medical Centre
-							</option>
-							<option value="GreenwayCommunityCentre">
-								Greenway Community Centre
-							</option>
-							<option value="HeliosMedicalCentre">Helios Medical Centre</option>
-							<option value="MonksParkSurgery">Monks Park Surgery</option>
-							<option value="SeaMillsSurgery">Sea Mills Surgery</option>
-							<option value="WestburyOnTrymPrimaryCareCentre">
-								Westbury On Trym Primary Care Centre
-							</option>
-							<option value="PioneerMedicalGroup">Pioneer Medical Group</option>
-							<option value="ShirehamptonGroupPractice">
-								Shirehampton Group Practice
-							</option>
-							<option value="SouthmeadAndHenburyFamilyPractice">
-								Southmead And Henbury Family Practice
-							</option>
-							<option value="GloucesterRoadMedicalCentre">
-								Gloucester Road Medical Centre
-							</option>
-							<option value="HorfieldHealthCentre">
-								Horfield Health Centre
-							</option>
-							<option value="BroadmeadMedicalCentre">
-								Broadmead Medical Centre
-							</option>
-							<option value="CharlotteKeelMedicalPractice">
-								Charlotte Keel Medical Practice
-							</option>
-							<option value="EastTreesMedicalPractice">
-								East Trees Medical Practice
-							</option>
-							<option value="LawrenceHillHealthCentre">
-								Lawrence Hill Health Centre
-							</option>
-							<option value="MontpelierHealthCentre">
-								Montpelier Health Centre
-							</option>
-							<option value="TheHomelessHealthService">
-								The Homeless Health Service
-							</option>
-							<option value="WellspringSurgery">Wellspring Surgery</option>
-							<option value="AirBalloonSurgery">Air Balloon Surgery</option>
-							<option value="BeechwoodMedicalPractice">
-								Beechwood Medical Practice
-							</option>
-							<option value="FishpondsFamilyPractice">
-								Fishponds Family Practice
-							</option>
-							<option value="OldSchoolSurgery">Old School Surgery</option>
-							<option value="FireclayHealth">Fireclay Health</option>
-							<option value="CadburyHeathHealthcare">
-								Cadbury Heath Healthcare
-							</option>
-							<option value="CloseFarmSurgery">Close Farm Surgery</option>
-							<option value="HanhamHealth">Hanham Health</option>
-							<option value="KingswoodHealthCentre">
-								Kingswood Health Centre
-							</option>
-							<option value="AlmondsburySurgery">Almondsbury Surgery</option>
-							<option value="PilningSurgery">Pilning Surgery</option>
-							<option value="SevernViewFamilyPractice">
-								Severn View Family Practice
-							</option>
-							<option value="StMaryStreetSurgery">
-								St Mary Street Surgery
-							</option>
-							<option value="StreamsideSurgery">Streamside Surgery</option>
-							<option value="DownendHealthGroup">Downend Health Group</option>
-							<option value="GreenValleysHealth">Green Valleys Health</option>
-							<option value="OrchardMedicalCentre">
-								Orchard Medical Centre
-							</option>
-							<option value="ThreeShiresMedicalPractice">
-								Three Shires Medical Practice
-							</option>
-							<option value="CourtsideSurgery">Courtside Surgery</option>
-							<option value="FromeValleyMedicalCentre">
-								Frome Valley Medical Centre
-							</option>
-							<option value="WellingtonRoadFamilyPractice">
-								Wellington Road Family Practice
-							</option>
-							<option value="WestWalkSurgery">West Walk Surgery</option>
-							<option value="KennedyWaySurgery">Kennedy Way Surgery</option>
-							<option value="BradleyStokeSurgery">Bradley Stoke Surgery</option>
-							<option value="ConcordMedicalCentre">
-								Concord Medical Centre
-							</option>
-							<option value="ConistonMedicalPractice">
-								Coniston Medical Practice
-							</option>
-							<option value="StokeGiffordMedicalCentre">
-								Stoke Gifford Medical Centre
-							</option>
-							<option value="BridgeViewMedicalCenter">
-								Bridge View Medical Center
-							</option>
-							<option value="MerrywoodPractice">Merrywood Practice</option>
-							<option value="LeonardSurgery">Leonard Surgery</option>
-							<option value="HillviewFamilyPractice">
-								Hillview Family Practice
-							</option>
-							<option value="HartwoodHealthcare">Hartwood Healthcare</option>
-							<option value="GrangeRoadSurgery">Grange Road Surgery</option>
-							<option value="CrestFamilyPractice">Crest Family Practice</option>
-							<option value="BedminsterFamilyPractice">
-								Bedminster Family Practice
-							</option>
-							<option value="ArmardaPractice">Armarda Practice</option>
-							<option value="BirchwoodMedicalPractice">
-								Birchwood Medical Practice
-							</option>
-							<option value="NightingaleValleyPractice">
-								Nightingale Valley Practice
-							</option>
-							<option value="PriorySurgery">Priory Surgery</option>
-							<option value="StockwoodMedicalCentre">
-								Stockwood Medical Centre
-							</option>
-							<option value="WellsRoadSurgery">Wells Road Surgery</option>
-							<option value="WinscombeBanwellFamilyPractice">
-								Winscombe & Banwell Family Practice
-							</option>
-							<option value="TudorLodgeSurgery">Tudor Lodge Surgery</option>
-							<option value="StaffordMedicalGroup">
-								Stafford Medical Group
-							</option>
-							<option value="MiltonSurgery">Milton Surgery</option>
-							<option value="HorizonHealthCentre">Horizon Health Centre</option>
-							<option value="GrahamRoadSurgery">Graham Road Surgery</option>
-							<option value="CedarsSurgery">Cedars Surgery</option>
-							<option value="168MedicalGroup">168 Medical Group</option></select
-						><br /><br />
+						<fieldset>
+							<legend>Where do you work?</legend>
+							<label for="organizationType">Organization Type:</label><br />
+							<select id="organizationType" name="organizationType">
+								<option value="">Select Organisation</option>
+								<option value="GpPractice">GP Practice</option>
+								<option value="Trust">Trust</option>
+								<option value="ICS">ICS</option>
+								<option value="Sirona">Sirona</option>
+								<option value="LocalAuthority">Local Authority</option>
+								<option value="VoluntarySector">Voluntary Sector</option>
+								<option value="Other">Other</option>
+							</select>
+
+							<br /><br />
+							<!-- Locality Select Field -->
+							<label for="locality">Locality:</label><br />
+							<select id="locality-dropdown" name="locality">
+								<option value="">Select Locality</option>
+								<option value="Woodspring">Woodspring</option>
+								<option value="NorthWestBristol">North & West Bristol</option>
+								<option value="InnerCityEastBristol">
+									Inner City & East Bristol
+								</option>
+								<option value="SouthGloucestershire">
+									South Gloucestershire
+								</option>
+								<option value="SouthBristol">South Bristol</option>
+								<option value="WestonWorleVillages">
+									Weston, Worle and Villages
+								</option></select
+							><br /><br />
+							<!-- PCN Select Field -->
+							<label for="pcn">PCN:</label><br />
+							<select id="pcn-dropdown" name="pcn">
+								<option value="">Select PCN</option>
+							</select>
+							<br /><br />
+
+							<!-- options will be aded dynamically -->
+
+							<!-- Practices Select Field -->
+							<label for="practice">Practice Name:</label><br />
+							<select id="practice-dropdown" name="practice">
+								<option value="">Select Practice</option>
+							</select>
+						</fieldset>
+						<br /><br />
+						<!-- options will be aded dynamically -- >
 						<!-- Organisation Response Section -->
 						<fieldset>
 							<legend>
-								Which organisation would you like your response from?
+								Is there a particular organisation you would like to hear back
+								from?
 							</legend>
 							<input
 								type="radio"
@@ -341,33 +215,18 @@
 								value="GPCB"
 							/>
 							<label for="gpcb">GPCB</label><br />
+
 							<input
 								type="radio"
-								id="allOrganisations"
+								id="dontMind"
 								name="organisationResponse"
-								value="All"
+								value="dontMind"
 							/>
-							<label for="allOrganisations">All</label><br />
-							<input
-								type="radio"
-								id="notSure"
-								name="organisationResponse"
-								value="notSure"
-							/>
-							<label for="allOrganisations">Not Sure</label>
+							<label for="allOrganisations">Any - I don't mind</label>
 						</fieldset>
 						<br />
-						<!-- Question Text Area -->
-						<label for="question">Your Question:</label><br />
-						<textarea
-							id="question"
-							name="question"
-							rows="4"
-							cols="50"
-							required
-						></textarea
-						><br /><br />
-						<!-- Response Type Radio Buttons -->
+
+						<!-- Response Type Radio Buttons
 						<input
 							type="radio"
 							id="personalResponse"
@@ -384,37 +243,28 @@
 							value="tableMeeting"
 						/>
 						<label for="tableMeeting">I wish to table this at a meeting</label
-						><br /><br />
+						><br /><br /> -->
 						<!-- Clinical Information Checkbox -->
-						<input
-							type="checkbox"
-							id="noClinicalInfo"
-							name="noClinicalInfo"
-							required
-						/>
-						<label for="noClinicalInfo"
-							>I confirm that no patient identifiable clinical information has
-							been entered</label
-						><br /><br />
+
 						<!-- Urgency Section -->
 						<fieldset>
 							<legend>Urgency of Request:</legend>
 							<input type="radio" id="sameDay" name="urgency" value="sameDay" />
-							<label for="sameDay">Same day</label><br />
+							<label for="sameDay">ASAP - Same day if possible</label><br />
 							<input
 								type="radio"
 								id="fiveBusinessDays"
 								name="urgency"
 								value="fiveBusinessDays"
 							/>
-							<label for="fiveBusinessDays">5 business days</label><br />
+							<label for="fiveBusinessDays">Soon</label><br />
 							<input
 								type="radio"
 								id="tenBusinessDays"
 								name="urgency"
 								value="tenBusinessDays"
 							/>
-							<label for="tenBusinessDays">10 business days</label><br />
+							<label for="tenBusinessDays">Relaxed</label><br />
 							<input
 								type="radio"
 								id="whenKnown"
@@ -425,7 +275,21 @@
 						</fieldset>
 						<br />
 						<!-- Submit Button -->
-						<input type="submit" class="button" value="Send Us Your Question" />
+						<input
+							type="checkbox"
+							id="noClinicalInfo"
+							name="noClinicalInfo"
+							required
+						/>
+						<label for="noClinicalInfo"
+							>I confirm that no patient identifiable clinical information has
+							been entered</label
+						><br /><br />
+						<input
+							type="submit"
+							class="button"
+							value="Thank you - Click here to submit your Question"
+						/>
 					</form>
 				</div>
 
@@ -475,38 +339,14 @@
 						</div>
 					</div>
 				</div>
-				<div class="grid">
-					<div id="centralized-information" class="invert box flow">
-						<h3>Centralized Information</h3>
-						<div class="frame">
-							<img src="images/sfd-11.jpg" alt="Centralized Information" />
-						</div>
-						<p>
-							Navigate the complexities of healthcare with ease through our
-							Centralized Information hub. Here, Avon LMC and One Care unite to
-							bring you the latest healthcare policies, insightful guidelines,
-							and industry news. Our joint commitment ensures you receive
-							consistent, timely updates that empower your practice.
-						</p>
-						<div class="button">Find out more...</div>
-					</div>
-
-					<div class="box invert flow">
-						<h3>Membership Services</h3>
-						<img src="/images/oc-5.png" alt="Membership Services" />
-						<p>
-							Avon LMC and One Care are discussing potential for reduced fees
-							through combining our joint resources. We would like to hear your
-							views on this. Use the form above to send us your views as well as
-							your questions.
-						</p>
-						<div class="button">Find out more...</div>
-					</div>
-				</div>
 			</div>
 		</div>
 
-		<footer role="content-info">@moc2023</footer>
+		<footer class="center box" role="content-info">
+			@moc2023 - this is a draft mockup site to explore a 'single front door
+			concept' implementation between One Care, LMC and GPCB -it is not live and
+			no questions will receive any response until official launch.
+		</footer>
 
 		<script src="/script.js"></script>
 	</body>
