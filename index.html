@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>GP United</title>
 
+
 		<link rel="stylesheet" href="/css/ab-reset.css" />
 		<link rel="stylesheet" href="/css/style.css" />
 	</head>
@@ -26,7 +27,7 @@
 					<a
 						class="nav-link active"
 						href="https://onecare.org.uk/what-we-do/gp-collaborative-board/"
-						>The GPCB</a
+						>GPCB</a
 					>
 				</li>
 			</ul>
@@ -47,6 +48,7 @@
 					<form
 						class="stack"
 						data-netlify="true"
+						action="/confirmation.html"
 						name="question"
 						method="POST"
 						netlify-honeypot="bot-field"
@@ -71,9 +73,9 @@
 						<fieldset>
 							<legend>We will need this information to contact you</legend>
 							<label for="name">*Who are you?:</label><br />
-							<input type="text" id="name" name="name" required /><br /><br />
+							<input type="text" id="name" name="name" required /><br />
 							<label for="name">What do you do?:</label><br />
-							<input type="text" id="name" name="name" required />
+							<input type="text" id="role" name="role" required />
 						</fieldset>
 						<br /><br />
 						<!-- Submit Button -->
@@ -86,8 +88,8 @@
 								id="email"
 								name="email"
 								required
-							/><br /><br />
-							<label for="mobile">Mobile Number:</label>
+							/><br/>
+							<label for="mobile">*Mobile Number:</label>
 
 							<br />
 							<input type="tel" id="mobile" name="mobile" /><br /><br />
@@ -254,62 +256,16 @@
 						/>
 					</form>
 				</div>
+				
 
-				<div class="grid">
-					<div class="cards grid">
-						<div class="invert box">
-							<div class="card-header flow">
-								<h3 class="card-title">LMC</h3>
-								<div class="card-img">
-									<img src="/images/lmc-logo.png" alt="" />
-								</div>
-							</div>
-							<div class="card-text">
-								<p>
-									Championing the voices of local GPs, focusing on grassroots
-									medical advocacy and support.
-								</p>
-							</div>
-						</div>
-						<div class="invert box flow">
-							<div class="card-header flow">
-								<h3 class="card-title">One Care</h3>
-								<div class="card-img frame">
-									<img src="images/oc-9.png" alt="" />
-								</div>
-							</div>
-							<div class="card-text">
-								<p>
-									The UK's largest GP Federation - Representing all BNSSG GP
-									practices at every significant ICS system meeting.
-								</p>
-							</div>
-						</div>
-						<div class="invert flow box">
-							<div class="card-header flow">
-								<h3 class="card-title flow">GPCB</h3>
-								<div class="card-img frame">
-									<img src="images/gpu-1.jpg" alt="" />
-								</div>
-							</div>
-							<div class="card-text">
-								<p>
-									The decision making voice of BNSSG General Practice, demanding
-									and delivering system resources to our practices.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
 		<footer class="center box" role="content-info">
 			@moc2023 - this is a draft mockup site to explore a 'single front door
-			concept' implementation between One Care, LMC and GPCB -it is not live and
-			no questions will receive any response until official launch.
+			concept' implementation between One Care, LMC and GPCB - it is functionally live for testing but no questions will receive any formal response until an officially notified  launch.
+			<img src="/images/sigmoc.jpg" alt="signature of wemmaester">
+			<!-- developers - please contact the original desinger, Dr Mark O'Connor, at 'dr.mark.oconnor@googlemail.com if you have any queries about this codebase - best wishes MOC (left project in Jan 2024) -->
 		</footer>
-
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 		<script src="/script.js"></script>
 	</body>
 </html>
